@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FuzzBot | Moderation</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- Navigation -->
+
+<nav class="dashboard-navbar">
+
+    <div class="logo">
+
+        <img
+            src="{{ url_for('static', filename='fuzzbot-logo.png') }}"
+            alt="FuzzBot Logo"
+        >
+
+        <span>
+            FuzzBot
+        </span>
+
+    </div>
+
+
+    <div class="dashboard-nav-links">
+
+        <a href="/dashboard">
+            ← Dashboard
+        </a>
+
+        <a href="/logout">
+            🚪 Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- Moderation -->
+
+<main class="dashboard-container">
+
+
+    <div class="dashboard-page-header">
+
+        <p class="dashboard-small-title">
+            FuzzBot Moderation
+        </p>
+
+        <h1>
+            🛡️ Moderation
+        </h1>
+
+        <p>
+            Manage moderation features for your server.
+        </p>
+
+    </div>
+
+
+    <!-- Moderation Grid -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- Warn -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                ⚠️
+            </div>
+
+            <h2>
+                Warn Member
+            </h2>
+
+            <p>
+                Warn a member when they break
+                your server's rules.
+            </p>
+
+            <button
+                class="dashboard-action-button"
+                onclick="showWarnInfo()"
+            >
+                Open Warn
+            </button>
+
+        </div>
+
+
+        <!-- Timeout -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                🔇
+            </div>
+
+            <h2>
+                Timeout
+            </h2>
+
+            <p>
+                Temporarily restrict a member
+                from communicating.
+            </p>
+
+            <button
+                class="dashboard-action-button"
+                onclick="showComingSoon()"
+            >
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- Kick -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                👢
+            </div>
+
+            <h2>
+                Kick Member
+            </h2>
+
+            <p>
+                Remove a member from the server.
+            </p>
+
+            <button
+                class="dashboard-action-button"
+                onclick="showComingSoon()"
+            >
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- Ban -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                🚫
+            </div>
+
+            <h2>
+                Ban Member
+            </h2>
+
+            <p>
+                Ban a member from the server.
+            </p>
+
+            <button
+                class="dashboard-action-button"
+                onclick="showComingSoon()"
+            >
+                Coming Soon
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Warn Panel -->
+
+    <section
+        id="warn-panel"
+        class="moderation-panel"
+        style="display: none;"
+    >
+
+        <h2>
+            ⚠️ Warn Member
+        </h2>
+
+        <p>
+            Send a warning to a member's Discord DMs.
+        </p>
+
+
+        <form
+            action="/warn"
+            method="POST"
+        >
+
+
+            <label for="user_id">
+                Discord Member ID
+            </label>
+
+            <input
+                type="text"
+                id="user_id"
+                name="user_id"
+                placeholder="Example: 123456789012345678"
+                required
+            >
+
+
+            <label for="reason">
+                Warning Reason
+            </label>
+
+            <input
+                type="text"
+                id="reason"
+                name="reason"
+                placeholder="Enter the reason..."
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="dashboard-action-button"
+            >
+                ⚠️ Send Warning
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+</main>
+
+
+<script>
+
+function showWarnInfo() {
+
+    const panel =
+        document.getElementById(
+            "warn-panel"
+        );
+
+    panel.style.display = "block";
+
+    panel.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function showComingSoon() {
+
+    alert(
+        "🚧 This moderation feature is coming soon!"
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
