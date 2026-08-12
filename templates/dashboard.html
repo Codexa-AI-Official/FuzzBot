@@ -1,0 +1,231 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FuzzBot Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- Dashboard Navigation -->
+
+<nav class="dashboard-navbar">
+
+    <div class="logo">
+
+        <img
+            src="{{ url_for('static', filename='fuzzbot-logo.png') }}"
+            alt="FuzzBot Logo"
+        >
+
+        <span>
+            FuzzBot
+        </span>
+
+    </div>
+
+
+    <div class="dashboard-nav-links">
+
+        <a href="/">
+            🏠 Website
+        </a>
+
+        <a href="/logout">
+            🚪 Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- Dashboard -->
+
+<main class="dashboard-container">
+
+
+    <!-- Welcome -->
+
+    <section class="dashboard-welcome">
+
+        <img
+            class="dashboard-logo"
+            src="{{ url_for('static', filename='fuzzbot-logo.png') }}"
+            alt="FuzzBot Logo"
+        >
+
+        <div>
+
+            <p class="dashboard-small-title">
+                FuzzBot Dashboard
+            </p>
+
+            <h1>
+                Welcome,
+                <span>{{ username }}</span>!
+            </h1>
+
+            <p>
+                Manage and explore your FuzzBot features.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Bot Status -->
+
+    <section class="bot-status-card">
+
+        <div>
+
+            <h2>
+                🤖 FuzzBot Status
+            </h2>
+
+            <p>
+                Your FuzzBot is currently online.
+            </p>
+
+        </div>
+
+
+        <div class="online-status">
+
+            <span class="status-dot"></span>
+
+            Online
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard Cards -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- Commands -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                ⚡
+            </div>
+
+            <h2>
+                Commands
+            </h2>
+
+            <p>
+                View the commands available
+                for your Discord server.
+            </p>
+
+            <a href="/#commands">
+                View Commands →
+            </a>
+
+        </div>
+
+
+        <!-- Moderation -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                🛡️
+            </div>
+
+            <h2>
+                Moderation
+            </h2>
+
+            <p>
+                Keep your server organized
+                with FuzzBot moderation tools.
+            </p>
+
+            <a href="/moderation">
+                Open Moderation →
+            </a>
+
+        </div>
+
+
+        <!-- Embeds -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                🎨
+            </div>
+
+            <h2>
+                Custom Embeds
+            </h2>
+
+            <p>
+                Create and manage custom
+                Discord embeds.
+            </p>
+
+            <a href="#">
+                Embeds →
+            </a>
+
+        </div>
+
+
+        <!-- Settings -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                ⚙️
+            </div>
+
+            <h2>
+                Settings
+            </h2>
+
+            <p>
+                Configure your FuzzBot
+                dashboard settings.
+            </p>
+
+            <a href="#">
+                Settings →
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>
+```
