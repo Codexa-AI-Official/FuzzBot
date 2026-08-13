@@ -33,11 +33,11 @@ app.secret_key = os.environ.get(
 CLIENT_ID = "1536519357025357844"
 
 CLIENT_SECRET = os.environ.get(
-    "DISCORD_CLIENT_SECRET"
+    "4AEV3-ESHcUxxDHW-cWoTH6Chrm0OXfW"
 )
 
 REDIRECT_URI = (
-    "http://127.0.0.1:5000/callback"
+    "http://fuzzbot.onrender.com/callback"
 )
 
 DISCORD_API = (
@@ -54,6 +54,18 @@ def home():
 
     return render_template(
         "index.html"
+    )
+
+
+# =========================================
+# Documentation
+# =========================================
+
+@app.route("/docs")
+def docs():
+
+    return render_template(
+        "docs.html"
     )
 
 
@@ -88,8 +100,14 @@ def callback():
 
         return """
         <h1>Discord Authorization Failed</h1>
-        <p>No authorization code was received.</p>
-        <a href="/">Return to FuzzBot</a>
+
+        <p>
+            No authorization code was received.
+        </p>
+
+        <a href="/">
+            Return to FuzzBot
+        </a>
         """
 
     if not CLIENT_SECRET:
@@ -267,7 +285,11 @@ def warn_member():
 
         return """
         <h1>Warning Failed</h1>
-        <p>Member ID and reason are required.</p>
+
+        <p>
+            Member ID and reason are required.
+        </p>
+
         <a href="/moderation">
             Back to Moderation
         </a>
@@ -358,6 +380,7 @@ def logout():
 # =========================================
 
 if __name__ == "__main__":
+
     app.run(
         host="0.0.0.0",
         port=int(os.environ.get("PORT", 5000)),
