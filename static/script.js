@@ -1,11 +1,16 @@
-```javascript
 function showDocs() {
 
-    const message =
-        document.getElementById("docs-message");
+    const docs = document.getElementById("docs-message");
 
-    message.innerHTML =
-        "📖 Documentation is coming soon!";
+    docs.classList.add("show");
 
 }
-```
+
+
+function hideDocs() {
+
+    const docs = document.getElementById("docs-message");
+
+    docs.classList.remove("show");
+
+}
