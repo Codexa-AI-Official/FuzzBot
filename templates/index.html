@@ -15,6 +15,7 @@
     <!-- FuzzBot Favicon -->
     <link
         rel="icon"
+        type="image/png"
         href="{{ url_for('static', filename='fuzzbot-favicon.png') }}"
     >
 
@@ -62,18 +63,12 @@
             Docs
         </a>
 
-
-        <!-- Discord Login -->
-
         <a
             class="dashboard-button"
             href="/login"
         >
             Login with Discord
         </a>
-
-
-        <!-- Bot Invite -->
 
         <a
             class="invite-button"
@@ -102,17 +97,14 @@
             ⚡ FuzzBot is online
         </div>
 
-
         <h1>
             Meet <span>FuzzBot</span>
         </h1>
-
 
         <p>
             A custom Discord bot made for the
             FantasticFuzz community.
         </p>
-
 
         <div class="hero-buttons">
 
@@ -122,7 +114,6 @@
             >
                 View Commands
             </a>
-
 
             <a
                 href="/login"
@@ -146,9 +137,7 @@
         What can FuzzBot do?
     </h2>
 
-
     <div class="feature-grid">
-
 
         <div class="feature-card">
 
@@ -219,20 +208,15 @@
         Commands
     </h2>
 
-
     <p class="section-description">
         Here's what FuzzBot can do right now.
     </p>
 
-
     <div class="command-list">
-
 
         <div class="command-card">
 
-            <code>
-                /ping
-            </code>
+            <code>/ping</code>
 
             <p>
                 Check if FuzzBot is online.
@@ -243,9 +227,7 @@
 
         <div class="command-card">
 
-            <code>
-                /createembed
-            </code>
+            <code>/createembed</code>
 
             <p>
                 Create a custom Discord embed.
@@ -256,9 +238,7 @@
 
         <div class="command-card">
 
-            <code>
-                /aboutbot
-            </code>
+            <code>/aboutbot</code>
 
             <p>
                 Learn more about FuzzBot.
@@ -269,9 +249,7 @@
 
         <div class="command-card">
 
-            <code>
-                /warn
-            </code>
+            <code>/warn</code>
 
             <p>
                 Warn a server member privately.
@@ -282,9 +260,7 @@
 
         <div class="command-card">
 
-            <code>
-                /ban
-            </code>
+            <code>/ban</code>
 
             <p>
                 Ban a member from the server.
@@ -295,9 +271,7 @@
 
         <div class="command-card">
 
-            <code>
-                /kick
-            </code>
+            <code>/kick</code>
 
             <p>
                 Kick a member from the server.
@@ -308,9 +282,7 @@
 
         <div class="command-card">
 
-            <code>
-                /timeout
-            </code>
+            <code>/timeout</code>
 
             <p>
                 Temporarily restrict a member from interacting in the server.
@@ -321,9 +293,7 @@
 
         <div class="command-card">
 
-            <code>
-                /mute
-            </code>
+            <code>/mute</code>
 
             <p>
                 Mute a member to prevent them from chatting.
@@ -349,15 +319,12 @@
             About FuzzBot
         </h2>
 
-
         <p>
             FuzzBot is a custom Discord bot created
             for the FantasticFuzz community.
         </p>
 
-
         <div class="about-info">
-
 
             <div>
 
@@ -397,7 +364,6 @@
 
             </div>
 
-
         </div>
 
     </div>
@@ -413,22 +379,132 @@
 >
 
     <h2>
-        Documentation
+        FuzzBot Documentation
     </h2>
 
-
     <p>
-        Learn how to use FuzzBot's commands
-        and features.
+        Learn how to use FuzzBot's commands and features.
     </p>
 
-
-    <button onclick="showDocs()">
+    <button
+        class="docs-button"
+        onclick="showDocs()"
+    >
         Open Documentation
     </button>
 
 
-    <div id="docs-message"></div>
+    <div
+        id="docs-message"
+        class="docs-panel"
+    >
+
+        <div class="docs-header">
+
+            <h3>
+                📚 FuzzBot Commands
+            </h3>
+
+            <button
+                class="close-docs"
+                onclick="hideDocs()"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/ping</h4>
+
+            <p>
+                Check if FuzzBot is online and responding.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/createembed</h4>
+
+            <p>
+                Create a custom Discord embed with your own
+                title, text, and color.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/aboutbot</h4>
+
+            <p>
+                Learn more about FuzzBot and its features.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/warn</h4>
+
+            <p>
+                Privately warn a member of your Discord server.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/ban</h4>
+
+            <p>
+                Ban a member from the server.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/kick</h4>
+
+            <p>
+                Kick a member from the server.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/timeout</h4>
+
+            <p>
+                Temporarily restrict a member from interacting
+                in the server.
+            </p>
+
+        </div>
+
+
+        <div class="docs-command">
+
+            <h4>/mute</h4>
+
+            <p>
+                Mute a member to prevent them from chatting.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
