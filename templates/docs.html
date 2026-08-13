@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FuzzBot Documentation | FantasticFuzz</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="{{ url_for('static', filename='fuzzbot-favicon.png') }}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <img
+            src="{{ url_for('static', filename='fuzzbot-logo.png') }}"
+            alt="FuzzBot Logo"
+        >
+
+        <span>
+            FuzzBot
+        </span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/#commands">
+            Commands
+        </a>
+
+        <a href="/#about">
+            About
+        </a>
+
+        <a href="/docs">
+            Docs
+        </a>
+
+        <a
+            class="dashboard-button"
+            href="/login"
+        >
+            Login with Discord
+        </a>
+
+        <a
+            class="invite-button"
+            href="https://discord.com/oauth2/authorize?client_id=1536519357025357844&scope=bot%20applications.commands&permissions=0"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Invite Bot
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- Documentation Header -->
+
+<main class="documentation-page">
+
+
+    <div class="documentation-header">
+
+        <div class="badge">
+            📚 FuzzBot Documentation
+        </div>
+
+
+        <h1>
+            FuzzBot <span>Docs</span>
+        </h1>
+
+
+        <p>
+            Everything you need to know about FuzzBot,
+            its commands, and its features.
+        </p>
+
+    </div>
+
+
+    <!-- About -->
+
+    <section class="documentation-section">
+
+        <h2>
+            🤖 About FuzzBot
+        </h2>
+
+
+        <p>
+            FuzzBot is a custom Discord bot created
+            for the FantasticFuzz community.
+        </p>
+
+
+        <p>
+            FuzzBot provides useful moderation tools,
+            custom embeds, slash commands, and other
+            features for Discord communities.
+        </p>
+
+    </section>
+
+
+    <!-- Getting Started -->
+
+    <section class="documentation-section">
+
+        <h2>
+            🚀 Getting Started
+        </h2>
+
+
+        <p>
+            To start using FuzzBot, invite the bot
+            to your Discord server using the
+            <strong>Invite Bot</strong> button.
+        </p>
+
+
+        <p>
+            Once FuzzBot is in your server, type
+            <strong>/</strong> in a Discord channel
+            to see its slash commands.
+        </p>
+
+    </section>
+
+
+    <!-- Commands -->
+
+    <section class="documentation-section">
+
+        <h2>
+            ⚡ Commands
+        </h2>
+
+
+        <div class="documentation-command">
+
+            <code>/ping</code>
+
+            <h3>
+                Check Bot Status
+            </h3>
+
+            <p>
+                Checks whether FuzzBot is online
+                and responding.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/createembed</code>
+
+            <h3>
+                Create an Embed
+            </h3>
+
+            <p>
+                Creates a custom Discord embed with
+                your chosen title, message, and color.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/aboutbot</code>
+
+            <h3>
+                About FuzzBot
+            </h3>
+
+            <p>
+                Displays information about FuzzBot,
+                including its creator and version.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/warn</code>
+
+            <h3>
+                Warn a Member
+            </h3>
+
+            <p>
+                Sends a warning to a server member.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/ban</code>
+
+            <h3>
+                Ban a Member
+            </h3>
+
+            <p>
+                Bans a member from the Discord server.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/kick</code>
+
+            <h3>
+                Kick a Member
+            </h3>
+
+            <p>
+                Removes a member from the Discord server.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/timeout</code>
+
+            <h3>
+                Timeout a Member
+            </h3>
+
+            <p>
+                Temporarily prevents a member from
+                interacting in the server.
+            </p>
+
+        </div>
+
+
+        <div class="documentation-command">
+
+            <code>/mute</code>
+
+            <h3>
+                Mute a Member
+            </h3>
+
+            <p>
+                Mutes a member to prevent them
+                from chatting.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="documentation-section">
+
+        <h2>
+            🛠️ Features
+        </h2>
+
+
+        <ul class="documentation-list">
+
+            <li>
+                ⚡ Slash commands
+            </li>
+
+            <li>
+                🛡️ Moderation tools
+            </li>
+
+            <li>
+                🎨 Custom Discord embeds
+            </li>
+
+            <li>
+                ⚠️ Member warnings
+            </li>
+
+            <li>
+                🤖 Custom FuzzBot responses
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- Back Button -->
+
+    <div class="documentation-back">
+
+        <a
+            href="/"
+            class="primary-button"
+        >
+            ← Back to FuzzBot
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img
+            src="{{ url_for('static', filename='fuzzbot-logo.png') }}"
+            alt="FuzzBot Logo"
+        >
+
+        <span>
+            FuzzBot
+        </span>
+
+    </div>
+
+
+    <p>
+        Made by FantasticFuzz • Stay Fantastic ⭐
+    </p>
+
+
+    <p class="copyright">
+        © 2026 FantasticFuzz
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
